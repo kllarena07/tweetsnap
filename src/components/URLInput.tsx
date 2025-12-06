@@ -1,12 +1,12 @@
-import { useState } from 'react'
+import { useState } from "react";
 
 interface URLInputProps {
-  onSubmit: (tweetId: string) => void
+  onSubmit: (tweetId: string) => void;
 }
 
 export default function URLInput({ onSubmit }: URLInputProps) {
-  const [url, setUrl] = useState('')
-  const [error, setError] = useState('')
+  const [url, setUrl] = useState("");
+  const [error, setError] = useState("");
 
   const extractTweetId = (tweetUrl: string): string | null => {
     // Support both twitter.com and x.com URLs
@@ -15,43 +15,45 @@ export default function URLInput({ onSubmit }: URLInputProps) {
       /(?:twitter\.com|x\.com)\/\w+\/statuses\/(\d+)/,
       /(?:twitter\.com|x\.com)\/status\/(\d+)/,
       /^(\d{19})$/, // Direct tweet ID
-    ]
+    ];
 
     for (const pattern of patterns) {
-      const match = tweetUrl.match(pattern)
+      const match = tweetUrl.match(pattern);
       if (match) {
-        return match[1]
+        return match[1];
       }
     }
 
-    return null
-  }
+    return null;
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setError('')
+    e.preventDefault();
+    setError("");
 
-    const tweetId = extractTweetId(url.trim())
+    const tweetId = extractTweetId(url.trim());
 
     if (!tweetId) {
-      setError('Please enter a valid Twitter/X URL or tweet ID')
-      return
+      setError("Please enter a valid Twitter/X URL or tweet ID");
+      return;
     }
 
-    onSubmit(tweetId)
-  }
+    onSubmit(tweetId);
+  };
 
   const handlePaste = async () => {
     try {
-      const text = await navigator.clipboard.readText()
-      setUrl(text)
-      setError('')
+      const text = await navigator.clipboard.readText();
+      setUrl(text);
+      setError("");
     } catch (err) {
-      console.error('Failed to read clipboard:', err)
+      console.error("Failed to read clipboard:", err);
       // Fallback: user can manually paste
-      alert('Clipboard access denied. Please paste manually (Ctrl+V or Cmd+V).')
+      alert(
+        "Clipboard access denied. Please paste manually (Ctrl+V or Cmd+V).",
+      );
     }
-  }
+  };
 
   return (
     <div className="url-input-container">
@@ -66,8 +68,8 @@ export default function URLInput({ onSubmit }: URLInputProps) {
             type="text"
             value={url}
             onChange={(e) => {
-              setUrl(e.target.value)
-              setError('')
+              setUrl(e.target.value);
+              setError("");
             }}
             placeholder="https://twitter.com/user/status/123456789"
             className="url-input"
@@ -99,5 +101,5 @@ export default function URLInput({ onSubmit }: URLInputProps) {
         </ul>
       </div>
     </div>
-  )
+  );
 }
