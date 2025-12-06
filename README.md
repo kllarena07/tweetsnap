@@ -2,6 +2,7 @@
 
 ## ✍ About
 A Chrome extension to capture and copy tweet screenshots to clipboard.
+![Helium](https://github.com/user-attachments/assets/aa229caf-a109-4b3f-9c9e-35e5cb2ef593)
 
 ## 📦 Installation
 
@@ -35,35 +36,6 @@ A Chrome extension to capture and copy tweet screenshots to clipboard.
 - [react-tweet](https://github.com/vercel/react-tweet) - Tweet embedding
 - [modern-screenshot](https://github.com/qq15725/modern-screenshot) - Screenshot capture
 
-## 🛠️ Development
-
-### Prerequisites
-
-- Node.js 16+
-- npm or pnpm
-
-### Development Setup
-
-1. Clone the repository
-2. Navigate to the extension directory
-3. Install dependencies:
-   ```bash
-   npm install
-   ```
-4. Start development server:
-   ```bash
-   npm run dev
-   ```
-5. Load the extension in Chrome using the `dist` folder
-
-### Building
-
-```bash
-npm run build
-```
-
-The built extension will be in the `dist` folder, ready to be loaded in Chrome.
-
 ## 🔧 Configuration
 
 The extension uses the following configuration:
@@ -74,14 +46,6 @@ The extension uses the following configuration:
   - `activeTab`: Access current tab
   - `clipboardWrite`: Write to clipboard
   - `scripting`: Required for clipboard operations
-
-## 📋 Supported URL Formats
-
-- `https://twitter.com/user/status/123456789`
-- `https://x.com/user/status/123456789`
-- `https://twitter.com/user/statuses/123456789`
-- `https://x.com/user/statuses/123456789`
-- Direct tweet ID: `1234567890123456789`
 
 ## 🐛 Troubleshooting
 
@@ -104,13 +68,5 @@ If clipboard access fails:
 1. **Manifest Validation**: Ensure `manifest.json` is valid JSON
 2. **File Paths**: Verify all files are in the correct locations
 3. **Chrome Version**: Ensure you're using a recent Chrome version
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
 
 _Made with ❤️ by [krayondev](https://x.com/krayondev)_
