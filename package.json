@@ -1,0 +1,29 @@
+{
+  "name": "tweet-screenshot-extension",
+  "version": "1.0.0",
+  "description": "Chrome extension to capture and copy tweet screenshots",
+  "private": true,
+  "license": "MIT",
+  "author": "Tweet Screenshot Extension",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react-swc": "^4.2.2",
+    "clsx": "^1.2.1",
+    "modern-screenshot": "^4.6.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-tweet": "^3.2.2",
+    "swr": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
+  }
+}

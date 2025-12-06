@@ -1,0 +1,267 @@
+/* Chrome Extension Popup Styles */
+html,
+body {
+  width: 350px;
+  min-width: 300px;
+  max-width: 400px;
+  height: 500px;
+  min-height: 400px;
+  max-height: 600px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #ffffff;
+}
+
+.popup-container {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* URL Input Component Styles */
+.url-input-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 16px;
+}
+
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0 0 8px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1da1f2;
+}
+
+.header p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #536471;
+  line-height: 1.25rem;
+}
+
+.url-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-group {
+  display: flex;
+  gap: 8px;
+}
+
+.url-input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.url-input:focus {
+  border-color: #1da1f2;
+}
+
+.paste-button {
+  padding: 12px;
+  background-color: #f7f9fa;
+  border: 2px solid #e1e8ed;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+.paste-button:hover {
+  background-color: #e1e8ed;
+}
+
+.error-message {
+  color: #e0245e;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.submit-button {
+  padding: 12px 24px;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #1a8cd8;
+}
+
+.examples {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid #e1e8ed;
+}
+
+.examples-title {
+  margin: 0 0 8px 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #536471;
+}
+
+.examples-list {
+  margin: 0;
+  padding-left: 16px;
+  font-size: 0.75rem;
+  color: #536471;
+}
+
+.examples-list li {
+  margin-bottom: 4px;
+}
+
+/* Tweet Viewer Component Styles */
+.tweet-viewer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e1e8ed;
+  margin-bottom: 12px;
+}
+
+.back-button {
+  padding: 8px 16px;
+  background-color: #f7f9fa;
+  border: 1px solid #e1e8ed;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: #536471;
+  transition: background-color 0.2s;
+}
+
+.back-button:hover {
+  background-color: #e1e8ed;
+}
+
+.screenshot-button {
+  padding: 8px 16px;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: background-color 0.2s;
+}
+
+.screenshot-button:hover {
+  background-color: #1a8cd8;
+}
+
+.screenshot-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.tweet-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.tweet-container {
+  width: 100%;
+}
+
+/* Scrollbar styling */
+.tweet-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tweet-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.tweet-content::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.tweet-content::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background-color: #000000;
+  }
+
+  .url-input {
+    background-color: #1c1c1e;
+    border-color: #38383a;
+    color: #ffffff;
+  }
+
+  .url-input:focus {
+    border-color: #1da1f2;
+  }
+
+  .paste-button {
+    background-color: #1c1c1e;
+    border-color: #38383a;
+  }
+
+  .paste-button:hover {
+    background-color: #38383a;
+  }
+
+  .submit-button {
+    background-color: #1da1f2;
+  }
+
+  .examples {
+    border-top-color: #38383a;
+  }
+
+  .back-button {
+    background-color: #1c1c1e;
+    border-color: #38383a;
+    color: #ffffff;
+  }
+
+  .back-button:hover {
+    background-color: #38383a;
+  }
+
+  .tweet-header {
+    border-bottom-color: #38383a;
+  }
+}

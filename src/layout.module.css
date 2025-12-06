@@ -1,0 +1,12 @@
+.root {
+  font-family: var(--tweet-font-family);
+  color: var(--tweet-font-color);
+  background: var(--tweet-bg-color);
+  height: 100vh;
+  overflow: auto;
+  padding: 2rem 1rem;
+}
+.main {
+  display: flex;
+  justify-content: center;
+}
