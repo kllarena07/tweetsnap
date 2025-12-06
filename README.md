@@ -1,14 +1,7 @@
-# Tweet Screenshot Extension
+# TweetSnap
 
+## ✍ About
 A Chrome extension to capture and copy tweet screenshots to clipboard.
-
-## 🚀 Features
-
-- 📸 **Screenshot Capture**: Capture tweet screenshots with high quality
-- 📋 **Clipboard Copy**: Copy screenshots directly to clipboard
-- 🌙 **Dark Mode**: Beautiful dark theme for tweets
-- 🔗 **URL Input**: Support for Twitter/X URLs and direct tweet IDs
-- ⚡ **Fast**: Lightweight and responsive popup interface
 
 ## 📦 Installation
 
@@ -37,15 +30,10 @@ A Chrome extension to capture and copy tweet screenshots to clipboard.
 4. Select the `dist` folder from the extension directory
 5. The extension icon should appear in your toolbar
 
-## 🎯 Usage
+## 🔗 Dependencies
 
-1. **Open Extension**: Click the extension icon in your Chrome toolbar
-2. **Enter Tweet URL**:
-   - Paste a Twitter/X URL (e.g., `https://twitter.com/user/status/123456789`)
-   - Or enter a direct tweet ID (e.g., `1234567890123456789`)
-   - Click the paste button (📋) to paste from clipboard
-3. **Capture Tweet**: Click "📸 Copy Screenshot" button
-4. **Get Screenshot**: The tweet screenshot will be copied to your clipboard
+- [react-tweet](https://github.com/vercel/react-tweet) - Tweet embedding
+- [modern-screenshot](https://github.com/qq15725/modern-screenshot) - Screenshot capture
 
 ## 🛠️ Development
 
@@ -117,26 +105,6 @@ If clipboard access fails:
 2. **File Paths**: Verify all files are in the correct locations
 3. **Chrome Version**: Ensure you're using a recent Chrome version
 
-## 📄 File Structure
-
-```
-tweet-screenshot-extension/
-├── manifest.json          # Chrome extension manifest
-├── index.html            # Extension popup HTML
-├── vite.config.ts        # Vite configuration
-├── tsconfig.json          # TypeScript configuration
-├── tsconfig.node.json     # Node TypeScript configuration
-├── package.json           # Dependencies and scripts
-├── README.md              # This file
-├── public/               # Static assets
-│   └── icons/          # Extension icons
-└── src/                  # Source code
-    ├── components/        # React components
-    ├── PopupApp.tsx      # Main popup component
-    ├── main.tsx          # React entry point
-    └── popup.css          # Extension styles
-```
-
 ## 🤝 Contributing
 
 1. Fork the repository
@@ -145,18 +113,4 @@ tweet-screenshot-extension/
 4. Test thoroughly
 5. Submit a pull request
 
-## 📄 License
-
-MIT License - see LICENSE file for details.
-
-## 🔗 Dependencies
-
-- [React](https://reactjs.org/) - UI framework
-- [react-tweet](https://github.com/vercel/react-tweet) - Tweet embedding
-- [modern-screenshot](https://github.com/qq15725/modern-screenshot) - Screenshot capture
-- [SWR](https://swr.vercel.app/) - Data fetching
-- [Vite](https://vitejs.dev/) - Build tool
-
-## 📞 Support
-
-For issues and feature requests, please open an issue on the GitHub repository.
+_Made with ❤️ by [krayondev](https://x.com/krayondev)_
